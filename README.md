@@ -55,7 +55,18 @@ Create a database named `dbphppec4_db` in PhpMyAdmin, then import the provided d
 
 This will create all tables (`museums`, `topics`, `museum_topic`,...) and populate them with all 42 museums, 8 topics, 137 topic relations, and the test user — ready to use.
 
-### 4. Access the site
+### 4. Configure the database connection (if necessary)
+Edit `.env` and set your local credentials, e.g.:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dbphppec4_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 5. Access the site
 Open your browser and navigate to:
 ```
 http://localhost/expo-museos/public
@@ -71,7 +82,7 @@ Test credentials:
 - **Email**: admin@fakemail.com
 - **Password**: uoc-25-S1@
 
-### 5. Live deployment
+### 6. Live deployment
 
 #### Current LIVE Status (2026) ![status: inactive](https://img.shields.io/badge/status-inactive-red)
 
