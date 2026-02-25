@@ -112,8 +112,6 @@ app/
 └── Providers/
     ├── AppServiceProvider.php          ← defaultStringLength fix
     └── RouteServiceProvider.php        ← API middleware + prefix config
-db/
-└── dbphppec4_db.sql            ← Database dump (tables + data)
 database/
 ├── factories/
 │   └── MuseumFactory.php               ← Faker-based museum data factory
@@ -125,6 +123,8 @@ database/
     ├── DatabaseSeeder.php
     ├── MuseumSeeder.php
     └── TopicSeeder.php
+db/
+└── dbphppec4_db.sql            ← Database dump (tables + data)
 public/
 └── build/                              ← Compiled Tailwind CSS + JS (npm run build)
 resources/
