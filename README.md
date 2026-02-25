@@ -29,8 +29,6 @@ It implements a fully functional directory of museums and exhibitions using **La
 Make sure you have installed:
 - **WAMP / LAMP / MAMP** (or equivalent local server stack)
 - **PHP >= 8.2** with PDO and MySQL extensions enabled
-- **Composer** (PHP dependency manager)
-- **Node.js & npm** (for Vite + Tailwind CSS compilation)
 - **MySQL** (via PhpMyAdmin or equivalent)
 
 > ⚠️ On Windows, make sure `php -v` returns a version ≥ 8.2 and that `pdo_mysql` is enabled in `php.ini`.  
