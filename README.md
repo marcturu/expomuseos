@@ -192,61 +192,88 @@ Returns `404` JSON response if no results are found.
 
 ## 📷 Screenshots
 
-### Menu (guest):
-![MenuGuest](screenshots/MenuGuest.jpg)
+### Home (Desktop):
+![Home(Desktop)](screenshots/Desktop_Home.png)
 
-### Menu (authenticated):
-![MenuAuth](screenshots/MenuAuth.jpg)
+### Museum Detail Page (Desktop):
+![MuseumDetailPage(Desktop)](screenshots/Desktop_MuseumPost.png)
 
-### Home:
-![Home](screenshots/Home.jpg)
+### Dashboard (Desktop):
+![Dashboard(Desktop)](screenshots/Desktop_Dashboard.png)
 
-### Museum Detail Page:
-![MuseumDetail](screenshots/MuseumDetail.jpg)
+### Log In (Desktop):
+![Login(Desktop)](screenshots/Desktop_Login.png)
 
-### Register:
-![Register](screenshots/Register.jpg)
+### Register (Desktop):
+![Register(Desktop)](screenshots/Desktop_Register.png)
 
-### Log In:
-![Login](screenshots/Login.jpg)
+### Profile (Desktop):
+![Profile(Desktop)](screenshots/Desktop_Profile.png)
+-
 
-### Profile:
-![Profile](screenshots/Profile.jpg)
+### Home (Tablet):
+![Home(Tablet)](screenshots/Tablet_Home.png)
 
-### Dashboard:
-![Dashboard](screenshots/Dashboard.jpg)
+### Museum Detail Page (Tablet):
+![MuseumDetailPage(Tablet)](screenshots/Tablet_MuseumPost.png)
 
-### API Museums (page 1):
-![ApiMuseums](screenshots/API_museums.jpg)
+### Dashboard (Tablet):
+![Dashboard(Tablet)](screenshots/Tablet_Dashboard.png)
 
-### API Museum (id 1):
-![ApiMuseum](screenshots/API_museum.jpg)
+### Log In (Tablet):
+![Login(Tablet)](screenshots/Tablet_Login.png)
 
-### API Topic (id 1, page 1):
-![ApiTopic](screenshots/API_topic.jpg)
+### Register (Tablet):
+![Register(Tablet)](screenshots/Tablet_Register.png)
 
-### POSTMAN — API Museums:
-![PostmanMuseums](screenshots/API_museums(Postman).jpg)
+### Profile (Tablet):
+![Profile(Tablet)](screenshots/Tablet_Profile.png)
+-
 
-### POSTMAN — API Museum:
-![PostmanMuseum](screenshots/API_museum(Postman).jpg)
+### Home w/o menu (Mobile):
+![Home(Mobile)](screenshots/Mobile_HomeWOMenu.png)
 
-### POSTMAN — API Topic:
-![PostmanTopic](screenshots/API_topic(Postman).jpg)
+### Home w/ menu (Mobile):
+![Home(Mobile)](screenshots/Mobile_HomeWMenu.png)
+
+### Museum Detail Page (Mobile):
+![MuseumDetailPage(Mobile)](screenshots/Mobile_MuseumPost.png)
+
+### Dashboard (Mobile):
+![Dashboard(Mobile)](screenshots/Mobile_Dashboard.png)
+
+### Log In (Mobile):
+![Login(Mobile)](screenshots/Mobile_Login.png)
+
+### Register (Mobile):
+![Register(Mobile)](screenshots/Mobile_Register.png)
+
+### Profile (Mobile):
+![Profile(Mobile)](screenshots/Mobile_Profile.png)
+-
+
+### POSTMAN — API Museums (page 1):
+![PostmanMuseums](screenshots/API_museums(Postman).png)
+
+### POSTMAN — API Museum (id 1):
+![PostmanMuseum](screenshots/API_museum(Postman).png)
+
+### POSTMAN — API Topic (topic 1; page 1):
+![PostmanTopic](screenshots/API_topic(Postman).png)
 
 ---
 
 ### Database — museums table:
-![MuseumsTable](screenshots/BD_museums.jpg)
+![MuseumsTable](screenshots/DB_museums.png)
 
 ### Database — topics table:
-![TopicsTable](screenshots/BD_topics.jpg)
+![TopicsTable](screenshots/DB_topics.png)
 
 ### Database — museum_topic pivot table:
-![PivotTable](screenshots/BD_museum_topic.jpg)
+![PivotTable](screenshots/DB_museum_topic.png)
 
 ### Database — users table:
-![UsersTable](screenshots/BD_users.jpg)
+![UsersTable](screenshots/DB_users.png)
 
 ---
 
