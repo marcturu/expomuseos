@@ -44,102 +44,38 @@ git clone https://github.com/marcturu/expo-museos.git
 ### 2. Relocate the project
 Move or copy the project folder inside WAMP's `www` folder, e.g.:  
 `C:\wamp64\www\expo-museos`
-> WAMP serves everything inside its `www` folder, so the project must be located there to access it.
+> WAMP serves everything inside its `www` folder, so the project must be located there to access it.  
 
-### 3. Install PHP dependencies
-```bash
-composer install
-```
+> All dependencies are already included in `vendor/`. Running `composer install` is optional if you want to update packages.
 
-### 4. Install Node dependencies and compile assets
-```bash
-npm install
-npm run build
-```
-> For active development with hot reload, use `npm run dev` in a separate terminal instead of `npm run build`.
+### 3. Import the database
+Create a database named `dbphppec4_db` in PhpMyAdmin, then import the provided dump:
 
-### 5. Configure the environment
-Copy the example environment file and set your local credentials:
-```bash
-cp .env.example .env
-php artisan key:generate
-```
+**PhpMyAdmin**: Import → Select file → `db/dbphppec4_db.sql` → Go
 
-Then edit `.env`:
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=dbphppec4_db
-DB_USERNAME=root
-DB_PASSWORD=
+This will create all tables (`museums`, `topics`, `museum_topic`,...) and populate them with all 42 museums, 8 topics, 137 topic relations, and the test user — ready to use.
 
-CACHE_STORE=file
-SESSION_DRIVER=file
-```
-
-### 6. Create the database and run migrations
-Create a new database named `dbphppec4_db` in PhpMyAdmin, then run:
-```bash
-php artisan migrate:fresh
-```
-
-> ⚠️ If you encounter a *"Specified key was too long"* error, add the following to `App/Providers/AppServiceProvider.php` in the `boot()` method:
-> ```php
-> use Illuminate\Support\Facades\Schema;
-> Schema::defaultStringLength(191);
-> ```
-> Then re-run `php artisan migrate:fresh`.
-
-### 7. Seed the database
-```bash
-php artisan db:seed
-```
-This will create 4 topics via `TopicSeeder`, 40 fictional museums via `MuseumFactory` + `MuseumSeeder`, and assign topics to each museum.
-
-The 2 real museums and their initial topics were created manually via Tinker. To recreate them:
-```bash
-php artisan tinker
-```
-```php
-use App\Models\Museum;
-use App\Models\Topic;
-
-$history = Topic::create(['name' => 'Historia del arte']);
-// ... create other topics
-
-$british = Museum::create([
-    'name' => 'Museo Británico',
-    'city' => 'Londres',
-    'schedule' => 'Lunes a sábado, 10:00–20:00',
-    'guided_tours' => 'sí',
-    'price' => 15.50,
-    'image' => 'british.jpg'
-]);
-$british->topics()->attach([$history->id, $archaeology->id]);
-```
-
-### 8. Access the site
+### 4. Access the site
 Open your browser and navigate to:
 ```
 http://localhost/expo-museos/public
 ```
-Or start the built-in server:
+Or use the built-in server:
 ```bash
 php artisan serve
 ```
 Then visit `http://127.0.0.1:8000`.
 
-Test credentials (pre-registered user):
+Test credentials:
+- **Name**: admin
 - **Email**: admin@fakemail.com
-- **Username**: admin
 - **Password**: uoc-25-S1@
 
-### 9. Live deployment
+### 5. Live deployment
 
 #### Current LIVE Status (2026) ![status: inactive](https://img.shields.io/badge/status-inactive-red)
 
-> ⚠️ **Important Note** > The project was deployed on the server:
+> ⚠️ **Important Note** The project was deployed on the server:
 ```
 https://eimtcms2.techlab.uoc.edu/~mturur/pec4/dbphppec4_museums/public
 ```
@@ -178,6 +114,8 @@ database/
     ├── DatabaseSeeder.php
     ├── MuseumSeeder.php
     └── TopicSeeder.php
+public/
+└── build/                              ← Compiled Tailwind CSS + JS (npm run build)
 resources/
 └── views/
     ├── home.blade.php                  ← Home page (featured museums)
@@ -187,8 +125,6 @@ resources/
 routes/
 ├── web.php                             ← Home & museum detail routes
 └── api.php                             ← API routes (prefix: /api)
-public/
-└── build/                              ← Compiled Tailwind CSS + JS (npm run build)
 .env                                    ← Environment config (DB, cache, session)
 ```
 
