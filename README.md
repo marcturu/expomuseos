@@ -162,13 +162,13 @@ All endpoints return pagination metadata: `current_page`, `per_page`, `total`, `
   "data": [
     {
       "id": 1,
-      "name": "Museo Británico",
-      "city": "Londres",
-      "schedule": "Lunes a sábado, 10:00–20:00",
-      "guided_tours": "sí",
-      "price": "15.50",
-      "image": "british.jpg",
-      "topics": "Historia del arte", "Arqueología"
+      "nombre": "British Museum",
+      "ciudad": "Londres",
+      "tematica": "Historia del arte, Arqueología",
+      "fechas_horarios": "Lunes a Sábado, 10:00–20:00",
+      "visitas_guiadas": "sí",
+      "precio": "15.50",
+      "imagen": "images/museums/british.jpg"
     },
     {
       ...
