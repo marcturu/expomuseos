@@ -170,9 +170,7 @@ All endpoints return pagination metadata: `current_page`, `per_page`, `total`, `
       "precio": "15.50",
       "imagen": "images/museums/british.jpg"
     },
-    {
-      ...
-    }
+    ...
   ],
   "per_page": 5,
   "total": 42,
