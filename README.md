@@ -94,7 +94,7 @@ https://eimtcms2.techlab.uoc.edu/~mturur/pec4/dbphppec4_museums/public
 ---
 
 ## 📂 Project Structure
-> For the purpose of simplifying cloning and execution, this repository intentionally includes the `vendor`, `node_modules`, and `.env` files. This decision was made to allow the project to run immediately after download without requiring additional setup steps such as dependency installation or environment configuration. This approach has been adopted strictly for demonstration purposes.  
+> For the purpose of simplifying cloning and execution, this repository intentionally includes the `vendor`, `node_modules`, and `.env` files. This decision was made to allow the project to run immediately after download without requiring additional setup steps such as dependency installation or environment configuration. This approach has been adopted strictly for demonstration purposes and the files do not contain any sensitive information, as this is a sample project.  
 > In a production or professional environment, these files would be excluded following standard best practices.
 
 ```
