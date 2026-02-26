@@ -149,7 +149,7 @@ All three endpoints return **JSON** and are **read-only** (GET). No authenticati
 
 | Endpoint | Description |
 |---|---|
-| `/api/museums/<page>` | Returns up to 5 museums per page with all fields and topics |
+| `/api/museums` or `/api/museums/<page>` | Returns up to 5 museums per page with all fields and topics |
 | `/api/museum/<id>` | Returns all fields + topics for the museum with the given ID |
 | `/api/topic/<id>/<page>` | Returns up to 5 museums (id, name, city) for the given topic, paginated |
 
