@@ -154,7 +154,6 @@ All three endpoints return **JSON** and are **read-only** (GET). No authenticati
 | `/api/topic/<id>/<page>` | Returns up to 5 museums (id, name, city) for the given topic, paginated |
 
 All endpoints return pagination metadata: `current_page`, `per_page`, `total`, `last_page`.  
-Returns `404` JSON response if no results are found.
 
 **Example response** (`/api/museums/1`):
 ```json
