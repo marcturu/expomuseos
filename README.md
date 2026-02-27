@@ -65,7 +65,7 @@ DB_PASSWORD=
 ```
 
 ### 5. Access the site
-Open your browser and navigate to:
+After starting the WAMP server, open your browser and navigate to:
 ```
 http://localhost/expomuseos/public
 ```
