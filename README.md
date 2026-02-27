@@ -36,12 +36,12 @@ Make sure you have installed:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/marcturu/expo-museos.git
+git clone https://github.com/marcturu/expomuseos.git
 ```
 
 ### 2. Relocate the project
 Move or copy the project folder inside WAMP's `www` folder, e.g.:  
-`C:\wamp64\www\expo-museos`
+`C:\wamp64\www\expomuseos`
 > WAMP serves everything inside its `www` folder, so the project must be located there to access it.  
 
 > All dependencies are already included in `vendor/`. Running `composer install` is optional if you want to update packages.
@@ -67,7 +67,7 @@ DB_PASSWORD=
 ### 5. Access the site
 Open your browser and navigate to:
 ```
-http://localhost/expo-museos/public
+http://localhost/expomuseos/public
 ```
 Or use the built-in server:
 ```bash
