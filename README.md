@@ -35,26 +35,40 @@ Make sure you have installed:
 > ⚠️ If WAMP does not start correctly, it may require the Visual C++ Redistributable packages.
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/marcturu/expomuseos.git
 ```
 
 ### 2. Relocate the project
+
 Move or copy the project folder inside WAMP's `www` folder, e.g.:  
 `C:\wamp64\www\expomuseos`
 > WAMP serves everything inside its `www` folder, so the project must be located there to access it.  
 
-> All dependencies are already included in `vendor/`. Running `composer install` is optional if you want to update packages.
+### 3. Install PHP dependencies
 
-### 3. Import the database
-Create a database named `dbphppec4_db` in PhpMyAdmin, then import the provided dump:
+The `vendor/` directory is not included in the repository. Install the required PHP dependencies with:
+```bash
+composer install
+```
 
-**PhpMyAdmin**: Import → Select file → `db/dbphppec4_db.sql` → Go
+### 4. Configure the environment
 
-This will create all tables (`museums`, `topics`, `museum_topic`,...) and populate them with all 42 museums, 8 topics, 137 topic relations, and the test user — ready to use.
+Create your local `.env` file from the provided example:
 
-### 4. Configure the database connection (if necessary)
-Edit `.env` and set your local credentials, e.g.:
+```bash
+cp .env.example .env
+```
+
+On Windows, you can also simply copy `.env.example` and rename the copy to `.env`.
+
+Then generate a new application key:
+```bash
+php artisan key:generate
+```
+
+Configure the database connection in `.env` (if not configurated already):
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -64,23 +78,76 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 5. Access the site
-After starting the WAMP server, open your browser and navigate to:
+> The `.env` file is intentionally excluded from the repository because it contains environment-specific configuration and application secrets such as `APP_KEY`.
+
+### 5. Import the database
+
+Create a database named `dbphppec4_db` in PhpMyAdmin, then import the provided dump:
+
+**PhpMyAdmin**: Import → Select file → `db/dbphppec4_db.sql` → Go
+
+This will create all tables (`museums`, `topics`, `museum_topic`,...) and populate them with all 42 museums, 8 topics, 137 topic relations, and the test user — ready to use.  
+No migrations or seeders are required for the initial setup because the provided SQL dump already contains the complete database.
+
+### 6. Access the site
+
+#### Option A — WAMP / Apache
+If using WAMP, make sure the project is located inside the `www` directory, for example:
+```text
+C:\wamp64\www\expomuseos
 ```
-http://localhost/expomuseos/public
+
+Start Apache and MySQL through WAMP, then open:
+```text
+http://localhost/expomuseos/public/
 ```
-Or use the built-in server:
+
+#### Option B — Laravel development server
+Alternatively, you can use Laravel's built-in PHP development server:
 ```bash
 php artisan serve
 ```
-Then visit `http://127.0.0.1:8000`.
 
-Test credentials:
-- **Name**: admin
-- **Email**: admin@fakemail.com
-- **Password**: uoc-25-S1@
+Then open:
+```text
+http://127.0.0.1:8000
+```
 
-### 6. Live deployment
+### 7. Frontend assets
+
+The repository includes the **already compiled production assets** in:
+```text
+public/build/
+```
+
+Therefore, **Node.js, `npm install`, `npm run dev`, and `npm run build` are not required to run the application from the cloned repository**.
+
+The original source files are still available under:
+```text
+resources/
+```
+
+If you want to modify the Tailwind CSS or JavaScript source and regenerate the production assets, install the Node.js dependencies and run:
+```bash
+npm install
+npm run build
+```
+
+For frontend development with Vite's hot reload:
+```bash
+npm run dev
+```
+
+> These commands are only necessary when modifying or rebuilding the frontend assets. They are not part of the normal execution procedure described above.
+
+### 8. Test credentials
+
+The database dump includes a test user:
+* **Name**: `admin`
+* **Email**: `admin@fakemail.com`
+* **Password**: `uoc-25-S1@`
+
+### 9. Live deployment
 
 #### Current LIVE Status (2026) ![status: inactive](https://img.shields.io/badge/status-inactive-red)
 
