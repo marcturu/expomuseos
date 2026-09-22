@@ -191,7 +191,7 @@ database/
     ├── MuseumSeeder.php
     └── TopicSeeder.php
 db/
-└── dbphppec4_db.sql            ← Database dump (tables + data)
+└── dbphppec4_db.sql                    ← Database dump (tables + data)
 public/
 └── build/                              ← Compiled Tailwind CSS + JS (npm run build)
 resources/
@@ -199,7 +199,7 @@ resources/
     ├── home.blade.php                  ← Home page (featured museums)
     ├── museum.blade.php                ← Individual museum detail page
     └── layouts/
-        └── navigation.blade.php       ← Session-aware navbar
+        └── navigation.blade.php        ← Session-aware navbar
 routes/
 ├── web.php                             ← Home & museum detail routes
 └── api.php                             ← API routes (prefix: /api)
