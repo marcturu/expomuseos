@@ -161,8 +161,6 @@ https://eimtcms2.techlab.uoc.edu/~mturur/pec4/dbphppec4_museums/public
 ---
 
 ## 📂 Project Structure
-> For the purpose of simplifying cloning and execution, this repository intentionally includes the `vendor`, `node_modules`, and `.env` files (`.gitignore`s commented). This decision was made to allow the project to run immediately after download without requiring additional setup steps such as dependency installation or environment configuration. This approach has been adopted strictly for demonstration purposes and the files do not contain any sensitive information, as this is a sample project.  
-> In a production or professional environment, these files would be excluded following standard best practices.
 
 ```
 DOCS/
@@ -205,7 +203,11 @@ resources/
 routes/
 ├── web.php                             ← Home & museum detail routes
 └── api.php                             ← API routes (prefix: /api)
-.env                                    ← Environment config (DB, cache, session)
+.env.example                            ← Environment configuration template  
+composer.json                           ← PHP dependencies  
+composer.lock                           ← Locked PHP dependency versions  
+package.json                            ← Frontend dependencies and scripts  
+package-lock.json                       ← Locked npm dependency versions
 ```
 
 ---
@@ -253,6 +255,8 @@ All endpoints return pagination metadata: `current_page`, `per_page`, `total`, `
 - All database queries use **Eloquent ORM** with parameterised bindings to prevent SQL injection.
 - API endpoints are stateless and use the `api` middleware group.
 - All user-facing output is escaped by Blade's `{{ }}` syntax to prevent XSS.
+- The `.env` file is excluded from version control and is created locally from `.env.example`.
+- Each installation generates its own **APP_KEY** using `php artisan key:generate`.
 
 ---
 
