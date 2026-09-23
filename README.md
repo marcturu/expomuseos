@@ -30,6 +30,7 @@ Make sure you have installed:
 - **WAMP / LAMP / MAMP** (or equivalent local server stack)
 - **PHP >= 8.2** with PDO and MySQL extensions enabled
 - **MySQL** (via PhpMyAdmin or equivalent)
+- **Composer** for PHP dependency management
 
 > ⚠️ On Windows, make sure `php -v` returns a version ≥ 8.2 and that `pdo_mysql` is enabled in `php.ini`.  
 > ⚠️ If WAMP does not start correctly, it may require the Visual C++ Redistributable packages.
@@ -68,7 +69,7 @@ Then generate a new application key:
 php artisan key:generate
 ```
 
-Configure the database connection in `.env` (if not configurated already):
+Configure the database connection in `.env` (if not configured already):
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -155,7 +156,7 @@ The database dump includes a test user:
 ```
 https://eimtcms2.techlab.uoc.edu/~mturur/pec4/dbphppec4_museums/public
 ```
-> Which was configured and maintained during 2025/26.  
+> Which was configured and maintained during 2025 and 2026.  
 > As of today, the application is no longer running on their servers (although the screenshots show how it used to).
 
 ---
