@@ -93,10 +93,7 @@ No migrations or seeders are required for the initial setup because the provided
 ### 6. Access the site
 
 #### Option A — WAMP / Apache
-If using WAMP, make sure the project is located inside the `www` directory, for example:
-```text
-C:\wamp64\www\expomuseos
-```
+If using WAMP, make sure the project is located inside the `www` directory, for example `C:\wamp64\www\expomuseos`.  
 
 Start Apache and MySQL through WAMP, then open:
 ```text
@@ -116,17 +113,11 @@ http://127.0.0.1:8000
 
 ### 7. Frontend assets
 
-The repository includes the **already compiled production assets** in:
-```text
-public/build/
-```
+The repository includes the **already compiled production assets** in `public/build/`.  
 
 Therefore, **Node.js, `npm install`, `npm run dev`, and `npm run build` are not required to run the application from the cloned repository**.
 
-The original source files are still available under:
-```text
-resources/
-```
+The original source files are still available under `resources`.  
 
 If you want to modify the Tailwind CSS or JavaScript source and regenerate the production assets, install the Node.js dependencies and run:
 ```bash
