@@ -1,4 +1,4 @@
-# <img alt="ExpoMuseos Logo" src="screenshots/expo-museos-logo.png" height="65px"> — Laravel full-stack museums & exhibitions directory
+# <img alt="ExpoMuseos Logo" src="screenshots/expo-museos-logo.png" height="65px"> — Laravel full-stack museums directory
 
 <sub>🗓️ Developed in January 2026</sub>
 
